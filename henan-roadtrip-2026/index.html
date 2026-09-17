@@ -3,98 +3,150 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>河南自驾行程 · 2026</title>
-<meta name="description" content="北京—新乡—洛阳—开封—临沂新能源自驾行程">
+<meta name="theme-color" content="#236c50">
+<meta name="description" content="北京—新乡—洛阳—开封—临沂新能源自驾行程，包含每日安排、酒店、距离和各景点门票。">
+<title>河南自驾手册 · 2026</title>
 <style>
-:root{--bg:#f4f7f6;--card:#fff;--ink:#18323c;--muted:#66777d;--line:#dfe8e5;--green:#1f766d;--soft:#edf6f3;--warm:#fff8ea}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.72 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}a{color:var(--green);text-decoration:none}.top{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--line)}.topin,.hero,.wrap{max-width:1080px;margin:auto;padding-left:20px;padding-right:20px}.topin{height:58px;display:flex;align-items:center;justify-content:space-between}.topin span{font-size:13px;color:var(--muted)}.hero{padding-top:34px;padding-bottom:24px}.hero h1{margin:0 0 10px;font-size:38px;line-height:1.2}.hero p{margin:0;color:var(--muted)}
-.routeflow{display:flex;align-items:flex-end;gap:10px;overflow-x:auto;padding:22px 0 10px;scrollbar-width:none}.routeflow::-webkit-scrollbar{display:none}.city{flex:0 0 auto;font-weight:800;font-size:18px;white-space:nowrap}.segment{flex:0 0 92px;text-align:center;color:var(--green)}.segment small{display:block;font-size:11px;color:var(--muted);line-height:1.2;margin-bottom:1px;white-space:nowrap}.segment b{display:block;font-size:24px;line-height:1;font-weight:500}
-.hotelcards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:14px}.hotelcard{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 14px}.hotelcard small{display:block;color:var(--muted);font-size:12px}.hotelcard b{display:block;margin-top:2px;font-size:15px}.hotelcard span{display:block;color:var(--muted);font-size:12px;margin-top:2px}
-.wrap{padding-bottom:50px}.section{font-size:25px;margin:30px 0 12px}.overview,.day,.box{background:#fff;border:1px solid var(--line);border-radius:12px}.overview{overflow-x:auto}.overview table,.box table{width:100%;border-collapse:collapse}.overview th,.overview td,.box td{padding:13px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.overview tr:last-child td,.box tr:last-child td{border-bottom:0}.overview th{font-size:13px;color:var(--muted);font-weight:600}.day{margin:20px 0;overflow:hidden}.dayhead{padding:18px 20px;background:var(--soft);border-bottom:1px solid var(--line)}.dayhead .date{font-size:13px;color:var(--green);font-weight:700}.dayhead h2{margin:4px 0 5px;font-size:22px}.dayhead p{margin:0;color:var(--muted)}.meta{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}.pill{padding:4px 9px;border:1px solid #d6e6e1;border-radius:999px;background:#fff;font-size:12px}.pill.ticket{background:var(--warm);border-color:#ecdcb0}.body{padding:6px 20px 18px}.item{display:grid;grid-template-columns:82px minmax(0,1fr);gap:16px;padding:15px 0;border-bottom:1px dashed var(--line)}.item:last-child{border-bottom:0}.time{font-size:13px;font-weight:700;color:var(--green)}.item h3{margin:0 0 5px;font-size:17px}.item p{margin:0;color:#40545b}.ticket,.food,.tip{margin-top:9px;padding:10px 12px;border-radius:8px;font-size:14px}.ticket{background:var(--warm)}.food{background:#f8f5ef}.tip{background:#eef6f4}.distances{display:flex;flex-wrap:wrap;gap:8px;margin-top:9px}.distance{padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:#fafcfc;font-size:12px;color:var(--muted)}.box{padding:0 6px}.footer{padding:22px 0 10px;color:var(--muted);font-size:12px}
-@media(max-width:720px){.topin,.hero,.wrap{padding-left:14px;padding-right:14px}.topin{height:54px}.hero{padding-top:24px}.hero h1{font-size:31px}.routeflow{gap:7px;padding-top:18px}.city{font-size:16px}.segment{flex-basis:72px}.segment small{font-size:10px}.segment b{font-size:21px}.hotelcards{grid-template-columns:1fr}.section{font-size:22px;margin-top:26px}.overview{overflow-x:auto}.overview table{min-width:720px}.dayhead{padding:16px 14px}.dayhead h2{font-size:19px}.body{padding:4px 14px 14px}.item{grid-template-columns:60px minmax(0,1fr);gap:10px;padding:14px 0}.time{font-size:12px}.item h3{font-size:16px}.item p{font-size:14px}.box td{display:block;padding:4px 12px;border:0}.box tr{display:block;padding:10px 0;border-bottom:1px solid var(--line)}.box tr:last-child{border-bottom:0}}
-@media(max-width:400px){.topin span{display:none}.item{grid-template-columns:52px minmax(0,1fr)}}
+:root{--background:#f4f7f3;--card:#fff;--foreground:#20382e;--muted:#5c7065;--primary:#236c50;--primary-dark:#154832;--soft:#eaf3ec;--border:#dce6dd;--warm:#faf4e7;--warm-text:#725823;--radius:18px;--shadow:0 6px 24px rgba(28,63,44,.045);--header-height:64px;--page-width:1100px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:140px;-webkit-text-size-adjust:100%}body{margin:0;background:var(--background);color:var(--foreground);font:16px/1.75 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",sans-serif}a{color:inherit;text-decoration:none}button,a{-webkit-tap-highlight-color:transparent}a:focus-visible,summary:focus-visible,.route-scroll:focus-visible{outline:3px solid var(--primary);outline-offset:4px}h1,h2,h3,p{margin:0}svg{flex-shrink:0}.container{width:100%;max-width:var(--page-width);margin-inline:auto;padding-inline:28px}.icon{display:inline-block;vertical-align:middle}.skip-link{position:fixed;top:-100px;left:20px;z-index:50;padding:10px 16px;background:var(--card)}.skip-link:focus{top:10px}
+.site-header{position:sticky;top:0;z-index:30;background:var(--card);border-bottom:1px solid var(--border)}.header-inner{height:var(--header-height);display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{display:inline-flex;align-items:center;gap:12px;font-weight:700;letter-spacing:.04em;white-space:nowrap}.brand-mark{display:grid;place-items:center;width:32px;height:32px;background:var(--primary);color:#fff;border-radius:9px;font-family:"Songti SC","Noto Serif CJK SC",serif;font-size:19px}.header-date{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.hero{padding-top:46px;padding-bottom:28px}.eyebrow{display:flex;align-items:center;gap:10px;font-size:12px;color:var(--primary);font-weight:650;letter-spacing:.14em}.eyebrow::before{content:"";width:22px;height:1px;background:var(--primary)}.hero-title{margin:14px 0 16px;font-family:"Songti SC","Noto Serif CJK SC",serif;font-size:clamp(32px,4.6vw,50px);font-weight:700;line-height:1.45;letter-spacing:.015em}.hero-title span{display:block;color:var(--primary)}.hero-details{display:flex;gap:10px 16px;flex-wrap:wrap;align-items:center;font-size:14px;color:var(--muted)}.hero-details span+span{border-left:1px solid #b9cabc;padding-left:16px}.route-panel{margin-top:28px;border:1px solid var(--border);border-radius:var(--radius);background:var(--card);padding:18px 22px;box-shadow:var(--shadow)}.route-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;color:var(--muted);font-size:12px}.route-heading strong{display:flex;gap:8px;align-items:center;color:var(--primary);font-size:13px;font-weight:600}.route-scroll{overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:#b8cfc0 transparent;padding:10px 3px 8px}.route-chain{display:flex;align-items:center;gap:14px;min-width:670px}.route-city{display:flex;align-items:center;justify-content:center;min-height:48px;padding-top:20px;font-size:19px;font-weight:700;white-space:nowrap;flex:0 0 60px}.route-city:hover{color:var(--primary)}.route-connector{display:flex;flex:1 0 68px;min-width:68px;flex-direction:column;gap:14px;padding-top:0}.route-distance{display:block;text-align:center;white-space:nowrap;font-size:12px;font-variant-numeric:tabular-nums;color:var(--muted);line-height:1.5}.route-arrow{height:1px;position:relative;width:100%;background:#86ad94}.route-arrow::after{content:"";position:absolute;right:0;top:-3px;width:7px;height:7px;border-top:1px solid #86ad94;border-right:1px solid #86ad94;transform:rotate(45deg)}
+.section-heading{display:flex;align-items:baseline;gap:14px;margin-bottom:16px}.section-index{font-size:12px;font-weight:700;letter-spacing:.12em;color:var(--primary)}.section-heading h2{font-size:23px;letter-spacing:.015em;line-height:1.5}.stays{padding-top:8px;padding-bottom:30px}.stay-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.stay-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);min-width:0}.stay-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px;color:var(--primary)}.stay-badge{background:var(--soft);padding:3px 10px;border-radius:6px;font-weight:650;font-size:13px;white-space:nowrap}.stay-top .icon{width:19px;height:19px;color:#789781}.stay-card h3{font-size:18px;font-weight:700;line-height:1.55}.stay-branch{display:block;min-height:24px;margin-top:3px;font-size:13px;color:var(--muted)}.stay-dates{display:flex;align-items:center;gap:7px;border-top:1px solid var(--border);padding-top:12px;margin-top:15px;color:var(--muted);font-size:12px;font-variant-numeric:tabular-nums;flex-wrap:wrap}.stay-dates .icon{width:14px;height:14px}
+.overview-section{padding:8px 0 32px}.overview-panel{border:1px solid var(--border);border-radius:var(--radius);background:var(--card);overflow:hidden;box-shadow:var(--shadow)}.overview-labels{display:grid;grid-template-columns:74px 1fr;padding:12px 22px;background:#edf3ee;color:var(--muted);font-size:12px}.overview-labels>div{display:grid;grid-template-columns:145px minmax(0,1.4fr) minmax(0,1fr);gap:16px}.overview-list{list-style:none;padding:0;margin:0}.overview-row{display:grid;grid-template-columns:74px minmax(0,1fr);align-items:start;padding:16px 22px;border-top:1px solid var(--border)}.overview-row:first-child{border-top:0}.overview-date{padding-top:2px;color:var(--primary);font-size:14px;font-weight:700;font-variant-numeric:tabular-nums}.overview-date:hover{text-decoration:underline}.overview-detail{display:grid;grid-template-columns:145px minmax(0,1.4fr) minmax(0,1fr);gap:16px;align-items:start;min-width:0}.overview-city{font-size:14px;font-weight:600;line-height:1.7}.overview-plan{font-size:14px;line-height:1.7}.overview-stay{font-size:12px;line-height:1.8;color:var(--muted)}
+.day-navigation{position:sticky;top:var(--header-height);z-index:20;margin:0 0 20px;padding:10px 0;background:var(--background);border-bottom:1px solid var(--border)}.day-nav-scroll{display:flex;gap:8px;overflow-x:auto;scrollbar-width:thin;scrollbar-color:#b8cfc0 transparent;padding:3px 1px 5px;overscroll-behavior-x:contain}.day-link{flex:1 0 109px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;min-height:49px;padding:5px 10px;border:1px solid var(--border);border-radius:10px;background:var(--card);line-height:1.4;transition:background-color .15s,border-color .15s}.day-link span{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}.day-link b{font-size:13px;font-weight:600;white-space:nowrap}.day-link:hover{border-color:var(--primary)}.day-link[aria-current="location"]{background:var(--primary);color:#fff;border-color:var(--primary)}.day-link[aria-current="location"] span{color:#e0eee5}
+.day-card{margin:0 0 24px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);overflow:clip}.day-header{padding:24px 26px 20px;background:var(--soft);border-bottom:1px solid var(--border)}.day-heading{display:grid;grid-template-columns:66px minmax(0,1fr);align-items:center;gap:20px}.date-tile{display:flex;flex-direction:column;align-items:center;border-radius:12px;padding:7px 5px;background:var(--primary);color:#fff;line-height:1.3}.date-tile small{font-size:10px;letter-spacing:.08em;color:#dcece1}.date-tile strong{font-size:28px;font-weight:650;line-height:1.35;font-variant-numeric:tabular-nums}.date-tile span{font-size:11px;color:#e4efe8}.day-heading h2{font-size:22px;line-height:1.55;font-weight:700}.day-description{margin-top:6px;font-size:14px;color:var(--muted);line-height:1.75}.day-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.meta-tag{display:inline-block;max-width:100%;border:1px solid #cadccc;background:#f9fcf9;color:#426a52;border-radius:6px;padding:4px 10px;font-size:12px;line-height:1.65}.meta-tag.fare{background:var(--warm);border-color:#e9dfc8;color:var(--warm-text)}
+.timeline{list-style:none;margin:0;padding:6px 26px 12px}.timeline>.timeline-entry{display:grid;grid-template-columns:116px minmax(0,1fr);gap:18px;padding:22px 0;border-bottom:1px solid #e7ece6;min-width:0}.timeline>.timeline-entry:last-child{border-bottom:0}.entry-time{padding-top:2px;font-size:12px;font-weight:650;color:var(--primary);font-variant-numeric:tabular-nums;line-height:1.8;white-space:nowrap}.entry-time::before{content:"";display:inline-block;vertical-align:2px;width:5px;height:5px;border-radius:50%;background:var(--primary);margin-right:8px}.entry-content{min-width:0;width:auto}.entry-content h3{font-size:17px;line-height:1.55;margin:0 0 6px;font-weight:650}.entry-content p{font-size:15px;line-height:1.85;color:#4a6054}.entry-content .ticket,.entry-content .tip,.entry-content .food{margin-top:12px;border-radius:8px;padding:10px 13px;font-size:13px;line-height:1.8}.entry-content .ticket{background:var(--warm);color:var(--warm-text);border-left:2px solid #c9ad71}.entry-content .tip{background:var(--soft);color:#375d46;border-left:2px solid #8aad95}.entry-content .food{background:var(--warm)}.distances{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}.distance{max-width:100%;display:block;font-size:12px;line-height:1.8;color:var(--muted);background:#f6f8f5;border:1px solid #e4eae1;border-radius:6px;padding:7px 10px}.day-lodging{display:flex;align-items:center;gap:9px;padding:12px 26px;background:#f8faf7;border-top:1px solid var(--border);font-size:12px;color:var(--muted)}.day-lodging .icon{width:16px;height:16px;color:var(--primary)}
+.memo{margin-top:32px;border:1px solid var(--border);border-radius:var(--radius);background:var(--card)}.memo summary{padding:18px 22px;cursor:pointer;font-size:15px;font-weight:650;color:var(--primary)}.memo-list{margin:0 22px 12px}.memo-row{display:grid;grid-template-columns:122px minmax(0,1fr);gap:16px;padding:14px 0;border-top:1px solid var(--border)}.memo-row dt{font-size:13px;color:var(--muted)}.memo-row dd{margin:0;font-size:14px;line-height:1.8}.memo-row dd small{font-size:13px;color:var(--muted)}.page-footer{display:flex;justify-content:space-between;align-items:start;gap:24px;padding:26px 0 45px;color:var(--muted);font-size:12px;line-height:1.9}.back-top{white-space:nowrap;color:var(--primary);padding:5px 0;min-height:32px}.back-top:hover{text-decoration:underline}
+@media(min-width:1500px){.hero-title{font-size:52px}}
+@media(max-width:900px){.overview-detail,.overview-labels>div{grid-template-columns:122px minmax(0,1fr) minmax(0,1fr);gap:12px}.stay-card{padding:16px}.day-heading h2{font-size:20px}.hotel-long{display:block}}
+@media(max-width:700px){:root{--header-height:56px}.container{padding-inline:16px}html{scroll-padding-top:140px}.brand{font-size:14px;gap:9px}.brand-mark{width:29px;height:29px;font-size:17px;border-radius:8px}.header-date{font-size:11px}.header-inner{gap:8px}.hero{padding-top:28px;padding-bottom:22px}.eyebrow{font-size:11px;letter-spacing:.09em}.hero-title{font-size:32px;line-height:1.55;margin:10px 0 14px}.hero-details{font-size:12px;gap:6px 10px}.hero-details span+span{padding-left:10px}.hero-details .return-note{flex-basis:100%;border:0;padding-left:0}.route-panel{padding:14px;margin-top:22px;border-radius:14px}.route-chain{min-width:560px;gap:10px}.route-city{flex-basis:42px;font-size:16px}.route-connector{flex-basis:65px}.route-distance{font-size:10px}.route-heading{font-size:10px}.route-heading strong{font-size:12px}.route-scroll{margin-inline:-1px;padding-bottom:10px}.section-heading{gap:10px;margin-bottom:13px}.section-heading h2{font-size:20px}.section-index{font-size:11px}.stays{padding-top:2px;padding-bottom:22px}.stay-grid{grid-template-columns:1fr;gap:10px}.stay-card{position:relative;display:grid;grid-template-columns:72px minmax(0,1fr);gap:0 14px;padding:16px;border-radius:14px;align-items:start}.stay-top{grid-column:1;grid-row:1/4;display:flex;align-items:flex-start;justify-content:flex-start;margin:0;padding-top:2px}.stay-top .icon{display:none}.stay-badge{padding:5px 9px;font-size:12px;border-radius:7px}.stay-card h3{grid-column:2;font-size:16px}.stay-branch{grid-column:2;font-size:12px;min-height:0;margin:2px 0 0}.stay-dates{grid-column:2;border:0;margin:7px 0 0;padding:0;font-size:11px;gap:5px}.stay-dates .icon{display:none}.overview-section{padding-top:6px;padding-bottom:24px}.overview-panel{border-radius:14px}.overview-labels{display:none}.overview-row{grid-template-columns:57px minmax(0,1fr);padding:15px 16px;gap:10px}.overview-date{font-size:13px}.overview-detail{display:block}.overview-city{font-size:14px}.overview-plan{margin-top:3px;font-size:13px;color:#465c4e;line-height:1.8}.overview-stay{margin-top:4px;font-size:11px}.overview-stay::before{content:"住宿 · ";color:var(--primary)}.day-navigation{margin-bottom:16px;padding:7px 0}.day-nav-scroll{gap:6px;padding-bottom:5px}.day-link{flex:0 0 88px;padding:5px 8px;min-height:47px;border-radius:8px}.day-link span{font-size:11px}.day-link b{font-size:12px}.day-card{margin-bottom:18px;border-radius:15px}.day-header{padding:18px 16px 16px}.day-heading{grid-template-columns:53px minmax(0,1fr);gap:13px;align-items:start}.date-tile{padding:6px 4px;border-radius:9px}.date-tile strong{font-size:25px}.date-tile small{font-size:9px}.date-tile span{font-size:10px}.day-heading h2{font-size:18px;line-height:1.6}.day-description{margin-top:5px;font-size:12px;line-height:1.8}.day-meta{margin-top:13px;gap:6px}.meta-tag{font-size:11px;padding:4px 8px;line-height:1.65}.timeline{padding:0 17px 6px}.timeline>.timeline-entry{display:block;padding:18px 0}.entry-time{margin-bottom:7px;padding-top:0;font-size:12px;line-height:1.6}.entry-time::before{width:5px;height:5px;margin-right:7px}.entry-content{width:100%}.entry-content h3{font-size:16px;line-height:1.6;margin-bottom:5px}.entry-content p{font-size:14px;line-height:1.9}.entry-content .ticket,.entry-content .tip,.entry-content .food{margin-top:10px;font-size:12px;padding:9px 11px;line-height:1.85}.distance{font-size:11px;padding:6px 9px;line-height:1.9}.distances{display:block;margin-top:10px}.distance+.distance{margin-top:6px}.day-lodging{padding:11px 17px;font-size:11px;line-height:1.8}.memo{margin-top:24px;border-radius:14px}.memo summary{padding:16px;font-size:14px}.memo-list{margin-inline:16px}.memo-row{display:block}.memo-row dt{font-size:12px;margin-bottom:4px}.memo-row dd{font-size:13px}.memo-row dd small{font-size:12px}.page-footer{padding-top:22px;font-size:11px;gap:18px}}
+@media(max-width:359px){.container{padding-inline:12px}.hero-title{font-size:28px}.brand{font-size:13px}.header-date{font-size:10px}.stay-card{padding:14px;grid-template-columns:65px minmax(0,1fr);gap:0 10px}.stay-badge{padding-inline:7px;font-size:11px}.stay-card h3{font-size:15px}.stay-dates{font-size:10px}.day-heading{grid-template-columns:47px minmax(0,1fr);gap:11px}.day-heading h2{font-size:17px}.day-header{padding:16px 14px}.timeline{padding-inline:15px}.page-footer{display:block}.back-top{display:inline-block;margin-top:10px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.day-link{transition:none}}
+@media print{.site-header,.day-navigation,.skip-link,.back-top{display:none}html{scroll-padding-top:0}body{background:#fff;font-size:12px}.container{max-width:none;padding:0}.hero{padding-top:0}.hero-title{font-size:30px}.route-chain{min-width:0}.route-panel,.stay-card,.day-card,.overview-panel{box-shadow:none}.stay-grid{grid-template-columns:repeat(3,1fr)}.day-card{break-inside:avoid}.timeline>.timeline-entry{display:grid}.memo{display:none}.page-footer{padding-bottom:0}}
 </style>
 </head>
-<body>
-<header class="top"><div class="topin"><b>河南 · 自驾手册</b><span>2026.09.25 — 10.01</span></div></header>
-<section class="hero"><h1>新乡会合，洛阳与开封慢慢玩</h1><p>4人1车 · 元PLUS 430km · 开封住2晚 · 9月30日晚从开封返临沂</p>
-<div class="routeflow" aria-label="自驾路线">
-  <a class="city" href="#d25">北京</a><span class="segment"><small>约650–670km</small><b>→</b></span>
-  <a class="city" href="#d25">新乡</a><span class="segment"><small>约190km</small><b>→</b></span>
-  <a class="city" href="#d26">洛阳</a><span class="segment"><small>约193km</small><b>→</b></span>
-  <a class="city" href="#d28">开封</a><span class="segment"><small>约443km</small><b>→</b></span>
-  <a class="city" href="#d30">临沂</a>
-</div>
-<div class="hotelcards">
-  <div class="hotelcard"><small>新乡1晚</small><b>银星酒店（中心医院胖东来店）</b><span>9/25入住 · 9/26退房</span></div>
-  <div class="hotelcard"><small>洛阳 · 9/26–27</small><b>洛悦春梅酒店（洛阳博物馆店）</b><span>连住2晚</span></div>
-  <div class="hotelcard"><small>开封 · 9/28–29</small><b>丽呈睿轩酒店（汴梁小宋城店）</b><span>连住2晚</span></div>
-</div>
+<body data-version="20260917-green-journal">
+<a class="skip-link" href="#daily">跳到每日行程</a>
+<header class="site-header"><div class="container header-inner"><a class="brand" href="#top" aria-label="河南自驾手册，返回顶部"><span class="brand-mark" aria-hidden="true">豫</span>河南 · 自驾手册</a><span class="header-date">2026.09.25 — 10.01</span></div></header>
+<main id="top" class="container">
+<section class="hero" aria-labelledby="hero-title"><p class="eyebrow">2026 · 河南秋日自驾</p><h1 class="hero-title" id="hero-title">新乡会合，<span>洛阳与开封慢慢玩。</span></h1><div class="hero-details"><span>4人1车</span><span>元PLUS 430km</span><span class="return-note">9月30日晚从开封返临沂</span></div>
+<div class="route-panel"><div class="route-heading"><strong><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 17h4a4 4 0 0 0 0-8H7m10-2h-1a4 4 0 0 0 0 8h4"/><circle cx="4" cy="17" r="2"/><circle cx="19" cy="7" r="2"/></svg>一路向河南</strong><span>距离为规划参考</span></div><nav class="route-scroll" aria-label="自驾路线，可左右滚动" tabindex="0"><div class="route-chain">
+<a class="route-city" href="#d25">北京</a>
+<span class="route-connector" aria-label="到新乡，约650–670km"><span class="route-distance">约650–670km</span><span class="route-arrow" aria-hidden="true"></span></span>
+<a class="route-city" href="#d25">新乡</a>
+<span class="route-connector" aria-label="到洛阳，约190km"><span class="route-distance">约190km</span><span class="route-arrow" aria-hidden="true"></span></span>
+<a class="route-city" href="#d26">洛阳</a>
+<span class="route-connector" aria-label="到开封，约193km"><span class="route-distance">约193km</span><span class="route-arrow" aria-hidden="true"></span></span>
+<a class="route-city" href="#d28">开封</a>
+<span class="route-connector" aria-label="到临沂，约443km"><span class="route-distance">约443km</span><span class="route-arrow" aria-hidden="true"></span></span>
+<a class="route-city" href="#d01">临沂</a>
+</div></nav></div></section>
+<section class="stays" id="stays" aria-labelledby="stays-title"><div class="section-heading"><span class="section-index">01</span><h2 id="stays-title">沿途住宿</h2></div><div class="stay-grid">
+<article class="stay-card"><div class="stay-top"><span class="stay-badge">新乡1晚</span><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-8m18 8V9a2 2 0 0 0-2-2H9v9M3 14h18M3 18v2m18-2v2"/><path d="M3 10h6v4H3z"/></svg></div><h3>银星酒店</h3><p class="stay-branch">中心医院胖东来店</p><div class="stay-dates"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M7 3v4m10-4v4M3 11h18m-13 4h2m4 0h2"/></svg><span>9/25入住</span><span aria-hidden="true">—</span><span>9/26退房</span></div></article>
+<article class="stay-card"><div class="stay-top"><span class="stay-badge">洛阳2晚</span><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-8m18 8V9a2 2 0 0 0-2-2H9v9M3 14h18M3 18v2m18-2v2"/><path d="M3 10h6v4H3z"/></svg></div><h3>洛悦春梅酒店</h3><p class="stay-branch">洛阳博物馆店</p><div class="stay-dates"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M7 3v4m10-4v4M3 11h18m-13 4h2m4 0h2"/></svg><span>9/26入住</span><span aria-hidden="true">—</span><span>9/28退房</span></div></article>
+<article class="stay-card"><div class="stay-top"><span class="stay-badge">开封2晚</span><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-8m18 8V9a2 2 0 0 0-2-2H9v9M3 14h18M3 18v2m18-2v2"/><path d="M3 10h6v4H3z"/></svg></div><h3>丽呈睿轩酒店</h3><p class="stay-branch">宋城路站 · 汴梁小宋城店</p><div class="stay-dates"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M7 3v4m10-4v4M3 11h18m-13 4h2m4 0h2"/></svg><span>9/28入住</span><span aria-hidden="true">—</span><span>9/30退房</span></div></article>
+</div></section>
+<section class="overview-section" id="overview" aria-labelledby="overview-title"><div class="section-heading"><span class="section-index">02</span><h2 id="overview-title">全程总览</h2></div><div class="overview-panel"><div class="overview-labels" aria-hidden="true"><span>日期</span><div><span>城市</span><span>核心安排</span><span>住宿</span></div></div><ol class="overview-list">
+<li class="overview-row"><a class="overview-date" href="#d25" aria-label="查看9/25行程">9/25</a><div class="overview-detail"><div class="overview-city">北京 → 新乡</div><p class="overview-plan">新乡东会合 + 胖东来生活广场（二胖）</p><p class="overview-stay">银星酒店（中心医院胖东来店）</p></div></li>
+<li class="overview-row"><a class="overview-date" href="#d26" aria-label="查看9/26行程">9/26</a><div class="overview-detail"><div class="overview-city">新乡 → 洛阳</div><p class="overview-plan">洛阳博物馆 + 西工小街 + 应天门</p><p class="overview-stay">洛悦春梅酒店（洛阳博物馆店）</p></div></li>
+<li class="overview-row"><a class="overview-date" href="#d27" aria-label="查看9/27行程">9/27</a><div class="overview-detail"><div class="overview-city">洛阳</div><p class="overview-plan">龙门石窟 + 午休 + 老城慢逛</p><p class="overview-stay">洛悦春梅酒店（洛阳博物馆店）</p></div></li>
+<li class="overview-row"><a class="overview-date" href="#d28" aria-label="查看9/28行程">9/28</a><div class="overview-detail"><div class="overview-city">洛阳 → 开封</div><p class="overview-plan">开封老城 + 夜市</p><p class="overview-stay">丽呈睿轩酒店（汴梁小宋城店）</p></div></li>
+<li class="overview-row"><a class="overview-date" href="#d29" aria-label="查看9/29行程">9/29</a><div class="overview-detail"><div class="overview-city">开封</div><p class="overview-plan">万岁山完整一天 + 夜场</p><p class="overview-stay">丽呈睿轩酒店（汴梁小宋城店）</p></div></li>
+<li class="overview-row"><a class="overview-date" href="#d30" aria-label="查看9/30行程">9/30</a><div class="overview-detail"><div class="overview-city">开封 → 临沂</div><p class="overview-plan">清明上河园完整一天，夜景后返临沂</p><p class="overview-stay">夜间行车</p></div></li>
+<li class="overview-row"><a class="overview-date" href="#d01" aria-label="查看10/1行程">10/1</a><div class="overview-detail"><div class="overview-city">临沂</div><p class="overview-plan">凌晨 / 清晨抵达</p><p class="overview-stay">临沂</p></div></li>
+</ol></div></section>
+<section id="daily" aria-labelledby="daily-title"><div class="section-heading"><span class="section-index">03</span><h2 id="daily-title">每日行程</h2></div><nav class="day-navigation" aria-label="按日期跳转"><div class="day-nav-scroll">
+<a class="day-link" href="#d25"><span>9/25</span><b>新乡</b></a>
+<a class="day-link" href="#d26"><span>9/26</span><b>洛博 · 夜游</b></a>
+<a class="day-link" href="#d27"><span>9/27</span><b>龙门 · 老城</b></a>
+<a class="day-link" href="#d28"><span>9/28</span><b>开封</b></a>
+<a class="day-link" href="#d29"><span>9/29</span><b>万岁山</b></a>
+<a class="day-link" href="#d30"><span>9/30</span><b>清园 · 返程</b></a>
+<a class="day-link" href="#d01"><span>10/1</span><b>临沂</b></a>
+</div></nav>
+<article class="day-card" id="d25" aria-labelledby="title-d25">
+<header class="day-header"><div class="day-heading"><div class="date-tile" aria-label="9月25日 · 周五"><small>09月</small><strong>25</strong><span>周五</span></div><div><h2 id="title-d25">北京 → 新乡｜二胖 + 会合</h2><p class="day-description">长途驾驶为主，下午到新乡后集中逛二胖。</p></div></div><div class="day-meta"><span class="meta-tag">约650–670km</span><span class="meta-tag">含补能约9–10小时</span><span class="meta-tag fare">二胖：免费</span></div></header>
+<ol class="timeline">
+<li class="timeline-entry" id="d25-step-1"><div class="entry-time">06:30</div><div class="entry-content"><h3>北京满电出发</h3><p>沿京港澳高速南下，按实际续航安排2–3次补能。</p></div></li>
+<li class="timeline-entry" id="d25-step-2"><div class="entry-time">15:30–16:30</div><div class="entry-content"><h3>预计抵达新乡</h3><p>先完成新乡东站会合，再前往二胖。</p></div></li>
+<li class="timeline-entry" id="d25-step-3"><div class="entry-time">17:00</div><div class="entry-content"><h3>胖东来生活广场（二胖）</h3><p>地址：新乡市卫滨区健康路31号。先逛服装，再逛超市、生鲜和熟食。</p><div class="ticket"><b>门票：</b>免费。</div></div></li>
+<li class="timeline-entry" id="d25-step-4"><div class="entry-time">20:00后</div><div class="entry-content"><h3>晚饭 / 回酒店</h3><p>二胖或周边吃饭后，回银星酒店休息。</p></div></li>
+</ol><footer class="day-lodging"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-8m18 8V9a2 2 0 0 0-2-2H9v9M3 14h18M3 18v2m18-2v2"/><path d="M3 10h6v4H3z"/></svg><span>银星酒店（中心医院胖东来店）</span></footer></article>
+<article class="day-card" id="d26" aria-labelledby="title-d26">
+<header class="day-header"><div class="day-heading"><div class="date-tile" aria-label="9月26日 · 周六"><small>09月</small><strong>26</strong><span>周六</span></div><div><h2 id="title-d26">新乡 → 洛阳｜洛阳博物馆 + 西工小街 + 应天门</h2><p class="day-description">下午洛博，晚上西工小街和应天门夜景。</p></div></div><div class="day-meta"><span class="meta-tag">约190km / 约2.5小时</span><span class="meta-tag">酒店→洛博约3km</span><span class="meta-tag fare">洛阳博物馆：免费</span></div></header>
+<ol class="timeline">
+<li class="timeline-entry" id="d26-step-1"><div class="entry-time">08:00</div><div class="entry-content"><h3>新乡出发</h3><p>早餐后退房前往洛阳。</p></div></li>
+<li class="timeline-entry" id="d26-step-2"><div class="entry-time">中午</div><div class="entry-content"><h3>牛肉汤 + 入住 / 寄存</h3><p>推荐牛肉汤配烧饼或饼丝，之后前往洛悦春梅酒店。</p></div></li>
+<li class="timeline-entry" id="d26-step-3"><div class="entry-time">13:30</div><div class="entry-content"><h3>洛阳博物馆</h3><p>重点看河洛文明、唐三彩和珍宝类展陈，提前实名预约。</p><div class="ticket"><b>门票：</b>免费，实名预约入馆。</div></div></li>
+<li class="timeline-entry" id="d26-step-4"><div class="entry-time">17:30</div><div class="entry-content"><h3>西工小街晚饭</h3><p>推荐小街锅贴，搭配浆面条、馄饨或粥。</p><div class="distances"><span class="distance">酒店→西工小街：约9km / 20–25分钟</span><span class="distance">西工小街→应天门：约3km / 10–15分钟</span></div></div></li>
+<li class="timeline-entry" id="d26-step-5"><div class="entry-time">19:00</div><div class="entry-content"><h3>应天门 + 明堂天堂外围</h3><p>以建筑夜景和散步拍照为主。</p><div class="ticket"><b>门票：</b>外围夜景免费；如入内，以当天官方票价为准。</div></div></li>
+<li class="timeline-entry" id="d26-step-6"><div class="entry-time">21:00</div><div class="entry-content"><h3>回洛悦春梅酒店</h3><p>连住两晚。</p></div></li>
+</ol><footer class="day-lodging"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-8m18 8V9a2 2 0 0 0-2-2H9v9M3 14h18M3 18v2m18-2v2"/><path d="M3 10h6v4H3z"/></svg><span>洛悦春梅酒店（洛阳博物馆店）</span></footer></article>
+<article class="day-card" id="d27" aria-labelledby="title-d27">
+<header class="day-header"><div class="day-heading"><div class="date-tile" aria-label="9月27日 · 周日"><small>09月</small><strong>27</strong><span>周日</span></div><div><h2 id="title-d27">洛阳｜龙门石窟 + 老城慢逛</h2><p class="day-description">上午龙门，下午休息，傍晚老城。</p></div></div><div class="day-meta"><span class="meta-tag">酒店→龙门约13km / 25–30分钟</span><span class="meta-tag fare">龙门石窟：90元 / 半价45元</span></div></header>
+<ol class="timeline">
+<li class="timeline-entry" id="d27-step-1"><div class="entry-time">07:00</div><div class="entry-content"><h3>早餐后去龙门石窟</h3><p>停车优先导航“龙门石窟西北服务区停车场”。</p></div></li>
+<li class="timeline-entry" id="d27-step-2"><div class="entry-time">08:30</div><div class="entry-content"><h3>龙门石窟</h3><p>西北服务区 → 大石门 → 宾阳三洞 → 万佛洞 → 莲花洞 → 奉先寺 / 卢舍那大佛 → 漫水桥 → 礼佛台。</p><div class="ticket"><b>门票：</b>全价90元，半价45元；景交车单程10元。</div></div></li>
+<li class="timeline-entry" id="d27-step-3"><div class="entry-time">12:30</div><div class="entry-content"><h3>午饭 + 午休</h3><p>返市区方向顺路吃饭，时间合适回酒店午休。</p></div></li>
+<li class="timeline-entry" id="d27-step-4"><div class="entry-time">15:30</div><div class="entry-content"><h3>丽景门—十字街 / 洛邑古城</h3><p>以街区慢逛和晚饭为主。</p><div class="ticket"><b>门票：</b>丽景门外观、老城街区、洛邑古城常规游览免费；内部展馆或体验另计。</div></div></li>
+</ol><footer class="day-lodging"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-8m18 8V9a2 2 0 0 0-2-2H9v9M3 14h18M3 18v2m18-2v2"/><path d="M3 10h6v4H3z"/></svg><span>洛悦春梅酒店（洛阳博物馆店）</span></footer></article>
+<article class="day-card" id="d28" aria-labelledby="title-d28">
+<header class="day-header"><div class="day-heading"><div class="date-tile" aria-label="9月28日 · 周一"><small>09月</small><strong>28</strong><span>周一</span></div><div><h2 id="title-d28">洛阳 → 开封｜老城 + 夜市</h2><p class="day-description">上午换城，下午轻松逛老城，晚上夜市。</p></div></div><div class="day-meta"><span class="meta-tag">约193km / 约2小时45分</span><span class="meta-tag">酒店→鼓楼约6–7km</span><span class="meta-tag fare">开封老城街区：免费</span></div></header>
+<ol class="timeline">
+<li class="timeline-entry" id="d28-step-1"><div class="entry-time">09:00</div><div class="entry-content"><h3>洛阳出发</h3><p>从洛悦春梅酒店退房后直接去开封。</p></div></li>
+<li class="timeline-entry" id="d28-step-2"><div class="entry-time">中午</div><div class="entry-content"><h3>入住丽呈睿轩酒店</h3><p>9/28入住，9/30退房，共2晚。</p></div></li>
+<li class="timeline-entry" id="d28-step-3"><div class="entry-time">14:00</div><div class="entry-content"><h3>书店街 / 鼓楼 / 包公湖周边</h3><p>以街区慢逛为主。</p><div class="ticket"><b>门票：</b>街区和包公湖周边散步免费；收费景点另购票。</div></div></li>
+<li class="timeline-entry" id="d28-step-4"><div class="entry-time">18:00</div><div class="entry-content"><h3>夜市</h3><p>推荐西司夜市或鼓楼一带，吃炒凉粉、杏仁茶、锅贴、灌汤包等。</p></div></li>
+</ol><footer class="day-lodging"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-8m18 8V9a2 2 0 0 0-2-2H9v9M3 14h18M3 18v2m18-2v2"/><path d="M3 10h6v4H3z"/></svg><span>丽呈睿轩酒店（汴梁小宋城店）</span></footer></article>
+<article class="day-card" id="d29" aria-labelledby="title-d29">
+<header class="day-header"><div class="day-heading"><div class="date-tile" aria-label="9月29日 · 周二"><small>09月</small><strong>29</strong><span>周二</span></div><div><h2 id="title-d29">开封｜万岁山完整一天 + 夜场</h2><p class="day-description">这一天只玩万岁山。</p></div></div><div class="day-meta"><span class="meta-tag">酒店→万岁山约8–10km / 20–25分钟</span><span class="meta-tag fare">成人票100元 / 优待票50元</span></div></header>
+<ol class="timeline">
+<li class="timeline-entry" id="d29-step-1"><div class="entry-time">开园前</div><div class="entry-content"><h3>从酒店出发</h3><p>尽量开园前后到景区，入园先看当天节目单。</p></div></li>
+<li class="timeline-entry" id="d29-step-2"><div class="entry-time">全天</div><div class="entry-content"><h3>围绕大型演出安排路线</h3><p>午饭、晚饭尽量园内解决。</p><div class="ticket"><b>门票：</b>成人票100元，优待票50元；使用规则以景区当天公告为准。</div></div></li>
+<li class="timeline-entry" id="d29-step-3"><div class="entry-time">夜场后</div><div class="entry-content"><h3>回酒店休息</h3><p>这是开封第二晚。</p></div></li>
+</ol><footer class="day-lodging"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-8m18 8V9a2 2 0 0 0-2-2H9v9M3 14h18M3 18v2m18-2v2"/><path d="M3 10h6v4H3z"/></svg><span>丽呈睿轩酒店（汴梁小宋城店）</span></footer></article>
+<article class="day-card" id="d30" aria-labelledby="title-d30">
+<header class="day-header"><div class="day-heading"><div class="date-tile" aria-label="9月30日 · 周三"><small>09月</small><strong>30</strong><span>周三</span></div><div><h2 id="title-d30">开封｜清明上河园 → 夜间返临沂</h2><p class="day-description">白天和晚上都留给清明上河园，夜景结束后返程。</p></div></div><div class="day-meta"><span class="meta-tag">酒店→清园约7–9km / 20–25分钟</span><span class="meta-tag fare">成人票120元 / 优待票60元</span><span class="meta-tag">开封→临沂约443km / 约6小时</span></div></header>
+<ol class="timeline">
+<li class="timeline-entry" id="d30-step-1"><div class="entry-time">上午</div><div class="entry-content"><h3>退房 + 前往清明上河园</h3><p>早餐后退房，行李装车或寄存前台。</p></div></li>
+<li class="timeline-entry" id="d30-step-2"><div class="entry-time">白天</div><div class="entry-content"><h3>清明上河园</h3><p>按当天演出时间表安排路线，中间留吃饭和休息。</p><div class="ticket"><b>门票：</b>成人票120元，优待票60元；《大宋·东京梦华》另购。</div></div></li>
+<li class="timeline-entry" id="d30-step-3"><div class="entry-time">夜景后</div><div class="entry-content"><h3>开始返临沂</h3><p>预计20:30–21:00左右出发，按当天实际离园时间调整。</p><div class="tip">夜间长途驾驶，建议轮换驾驶并按疲劳程度进服务区休息。</div></div></li>
+</ol><footer class="day-lodging"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 17h4a4 4 0 0 0 0-8H7m10-2h-1a4 4 0 0 0 0 8h4"/><circle cx="4" cy="17" r="2"/><circle cx="19" cy="7" r="2"/></svg><span>9/30退房 · 夜间返临沂</span></footer></article>
+<article class="day-card" id="d01" aria-labelledby="title-d01">
+<header class="day-header"><div class="day-heading"><div class="date-tile" aria-label="10月1日 · 周四"><small>10月</small><strong>01</strong><span>周四</span></div><div><h2 id="title-d01">临沂｜凌晨 / 清晨抵达</h2><p class="day-description">9月30日晚从开封出发，预计10月1日凌晨或清晨到达。</p></div></div></header>
+<ol class="timeline">
+<li class="timeline-entry" id="d01-step-1"><div class="entry-time">凌晨</div><div class="entry-content"><h3>抵达临沂</h3><p>到达后以休息为主。</p></div></li>
+</ol><footer class="day-lodging"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 17h4a4 4 0 0 0 0-8H7m10-2h-1a4 4 0 0 0 0 8h4"/><circle cx="4" cy="17" r="2"/><circle cx="19" cy="7" r="2"/></svg><span>抵达临沂 · 休息</span></footer></article>
 </section>
-<main class="wrap">
-<h2 class="section">全程总览</h2>
-<div class="overview"><table><thead><tr><th>日期</th><th>城市</th><th>核心安排</th><th>住宿</th></tr></thead><tbody>
-<tr><td>9/25</td><td>北京 → 新乡</td><td>新乡东会合 + 胖东来生活广场（二胖）</td><td>银星酒店（中心医院胖东来店）</td></tr>
-<tr><td>9/26</td><td>新乡 → 洛阳</td><td>洛阳博物馆 + 西工小街 + 应天门</td><td>洛悦春梅酒店（洛阳博物馆店）</td></tr>
-<tr><td>9/27</td><td>洛阳</td><td>龙门石窟 + 午休 + 老城慢逛</td><td>洛悦春梅酒店（洛阳博物馆店）</td></tr>
-<tr><td>9/28</td><td>洛阳 → 开封</td><td>开封老城 + 夜市</td><td>丽呈睿轩酒店（汴梁小宋城店）</td></tr>
-<tr><td>9/29</td><td>开封</td><td>万岁山完整一天 + 夜场</td><td>丽呈睿轩酒店（汴梁小宋城店）</td></tr>
-<tr><td>9/30</td><td>开封 → 临沂</td><td>清明上河园完整一天，夜景后返临沂</td><td>夜间行车</td></tr>
-<tr><td>10/1</td><td>临沂</td><td>凌晨 / 清晨抵达</td><td>临沂</td></tr>
-</tbody></table></div>
-
-<section class="day" id="d25"><div class="dayhead"><div class="date">9月25日 · 周五</div><h2>北京 → 新乡｜二胖 + 会合</h2><p>长途驾驶为主，下午到新乡后集中逛二胖。</p><div class="meta"><span class="pill">约650–670km</span><span class="pill">含补能约9–10小时</span><span class="pill ticket">二胖：免费</span></div></div><div class="body">
-<div class="item"><div class="time">06:30</div><div><h3>北京满电出发</h3><p>沿京港澳高速南下，按实际续航安排2–3次补能。</p></div></div>
-<div class="item"><div class="time">15:30–16:30</div><div><h3>预计抵达新乡</h3><p>先完成新乡东站会合，再前往二胖。</p></div></div>
-<div class="item"><div class="time">17:00</div><div><h3>胖东来生活广场（二胖）</h3><p>地址：新乡市卫滨区健康路31号。先逛服装，再逛超市、生鲜和熟食。</p><div class="ticket"><b>门票：</b>免费。</div></div></div>
-<div class="item"><div class="time">20:00后</div><div><h3>晚饭 / 回酒店</h3><p>二胖或周边吃饭后，回银星酒店休息。</p></div></div>
-</div></section>
-
-<section class="day" id="d26"><div class="dayhead"><div class="date">9月26日 · 周六</div><h2>新乡 → 洛阳｜洛阳博物馆 + 西工小街 + 应天门</h2><p>下午洛博，晚上西工小街和应天门夜景。</p><div class="meta"><span class="pill">约190km / 约2.5小时</span><span class="pill">酒店→洛博约3km</span><span class="pill ticket">洛阳博物馆：免费</span></div></div><div class="body">
-<div class="item"><div class="time">08:00</div><div><h3>新乡出发</h3><p>早餐后退房前往洛阳。</p></div></div>
-<div class="item"><div class="time">中午</div><div><h3>牛肉汤 + 入住 / 寄存</h3><p>推荐牛肉汤配烧饼或饼丝，之后前往洛悦春梅酒店。</p></div></div>
-<div class="item"><div class="time">13:30</div><div><h3>洛阳博物馆</h3><p>重点看河洛文明、唐三彩和珍宝类展陈，提前实名预约。</p><div class="ticket"><b>门票：</b>免费，实名预约入馆。</div></div></div>
-<div class="item"><div class="time">17:30</div><div><h3>西工小街晚饭</h3><p>推荐小街锅贴，搭配浆面条、馄饨或粥。</p><div class="distances"><span class="distance">酒店→西工小街：约9km / 20–25分钟</span><span class="distance">西工小街→应天门：约3km / 10–15分钟</span></div></div></div>
-<div class="item"><div class="time">19:00</div><div><h3>应天门 + 明堂天堂外围</h3><p>以建筑夜景和散步拍照为主。</p><div class="ticket"><b>门票：</b>外围夜景免费；如入内，以当天官方票价为准。</div></div></div>
-<div class="item"><div class="time">21:00</div><div><h3>回洛悦春梅酒店</h3><p>连住两晚。</p></div></div>
-</div></section>
-
-<section class="day" id="d27"><div class="dayhead"><div class="date">9月27日 · 周日</div><h2>洛阳｜龙门石窟 + 老城慢逛</h2><p>上午龙门，下午休息，傍晚老城。</p><div class="meta"><span class="pill">酒店→龙门约13km / 25–30分钟</span><span class="pill ticket">龙门石窟：90元 / 半价45元</span></div></div><div class="body">
-<div class="item"><div class="time">07:00</div><div><h3>早餐后去龙门石窟</h3><p>停车优先导航“龙门石窟西北服务区停车场”。</p></div></div>
-<div class="item"><div class="time">08:30</div><div><h3>龙门石窟</h3><p>西北服务区 → 大石门 → 宾阳三洞 → 万佛洞 → 莲花洞 → 奉先寺 / 卢舍那大佛 → 漫水桥 → 礼佛台。</p><div class="ticket"><b>门票：</b>全价90元，半价45元；景交车单程10元。</div></div></div>
-<div class="item"><div class="time">12:30</div><div><h3>午饭 + 午休</h3><p>返市区方向顺路吃饭，时间合适回酒店午休。</p></div></div>
-<div class="item"><div class="time">15:30</div><div><h3>丽景门—十字街 / 洛邑古城</h3><p>以街区慢逛和晚饭为主。</p><div class="ticket"><b>门票：</b>丽景门外观、老城街区、洛邑古城常规游览免费；内部展馆或体验另计。</div></div></div>
-</div></section>
-
-<section class="day" id="d28"><div class="dayhead"><div class="date">9月28日 · 周一</div><h2>洛阳 → 开封｜老城 + 夜市</h2><p>上午换城，下午轻松逛老城，晚上夜市。</p><div class="meta"><span class="pill">约193km / 约2小时45分</span><span class="pill">酒店→鼓楼约6–7km</span><span class="pill ticket">开封老城街区：免费</span></div></div><div class="body">
-<div class="item"><div class="time">09:00</div><div><h3>洛阳出发</h3><p>从洛悦春梅酒店退房后直接去开封。</p></div></div>
-<div class="item"><div class="time">中午</div><div><h3>入住丽呈睿轩酒店</h3><p>9/28入住，9/30退房，共2晚。</p></div></div>
-<div class="item"><div class="time">14:00</div><div><h3>书店街 / 鼓楼 / 包公湖周边</h3><p>以街区慢逛为主。</p><div class="ticket"><b>门票：</b>街区和包公湖周边散步免费；收费景点另购票。</div></div></div>
-<div class="item"><div class="time">18:00</div><div><h3>夜市</h3><p>推荐西司夜市或鼓楼一带，吃炒凉粉、杏仁茶、锅贴、灌汤包等。</p></div></div>
-</div></section>
-
-<section class="day" id="d29"><div class="dayhead"><div class="date">9月29日 · 周二</div><h2>开封｜万岁山完整一天 + 夜场</h2><p>这一天只玩万岁山。</p><div class="meta"><span class="pill">酒店→万岁山约8–10km / 20–25分钟</span><span class="pill ticket">成人票100元 / 优待票50元</span></div></div><div class="body">
-<div class="item"><div class="time">开园前</div><div><h3>从酒店出发</h3><p>尽量开园前后到景区，入园先看当天节目单。</p></div></div>
-<div class="item"><div class="time">全天</div><div><h3>围绕大型演出安排路线</h3><p>午饭、晚饭尽量园内解决。</p><div class="ticket"><b>门票：</b>成人票100元，优待票50元；使用规则以景区当天公告为准。</div></div></div>
-<div class="item"><div class="time">夜场后</div><div><h3>回酒店休息</h3><p>这是开封第二晚。</p></div></div>
-</div></section>
-
-<section class="day" id="d30"><div class="dayhead"><div class="date">9月30日 · 周三</div><h2>开封｜清明上河园 → 夜间返临沂</h2><p>白天和晚上都留给清明上河园，夜景结束后返程。</p><div class="meta"><span class="pill">酒店→清园约7–9km / 20–25分钟</span><span class="pill ticket">成人票120元 / 优待票60元</span><span class="pill">开封→临沂约443km / 约6小时</span></div></div><div class="body">
-<div class="item"><div class="time">上午</div><div><h3>退房 + 前往清明上河园</h3><p>早餐后退房，行李装车或寄存前台。</p></div></div>
-<div class="item"><div class="time">白天</div><div><h3>清明上河园</h3><p>按当天演出时间表安排路线，中间留吃饭和休息。</p><div class="ticket"><b>门票：</b>成人票120元，优待票60元；《大宋·东京梦华》另购。</div></div></div>
-<div class="item"><div class="time">夜景后</div><div><h3>开始返临沂</h3><p>预计20:30–21:00左右出发，按当天实际离园时间调整。</p><div class="tip">夜间长途驾驶，建议轮换驾驶并按疲劳程度进服务区休息。</div></div></div>
-</div></section>
-
-<section class="day"><div class="dayhead"><div class="date">10月1日 · 周四</div><h2>临沂｜凌晨 / 清晨抵达</h2><p>9月30日晚从开封出发，预计10月1日凌晨或清晨到达。</p></div><div class="body"><div class="item"><div class="time">凌晨</div><div><h3>抵达临沂</h3><p>到达后以休息为主。</p></div></div></div></section>
-
-<h2 class="section">住宿 / 出行备忘</h2>
-<div class="box"><table>
-<tr><td>9/25 新乡</td><td><b>银星酒店（中心医院胖东来店）</b></td></tr>
-<tr><td>9/26–27 洛阳</td><td><b>洛悦春梅酒店（洛阳博物馆店）</b><br>9/26入住，9/28退房。</td></tr>
-<tr><td>9/28–29 开封</td><td><b>开封宋城路站丽呈睿轩酒店（汴梁小宋城店）</b><br>9/28入住，9/30退房。</td></tr>
-<tr><td>9/30 夜间</td><td><b>开封 → 临沂</b><br>清明上河园夜景结束后返程。</td></tr>
-</table></div>
-<div class="footer">距离和车程为规划参考，实际以当天导航为准；门票以景区当天公告为准。</div>
+<details class="memo" id="memo"><summary>住宿 / 出行备忘</summary><dl class="memo-list"><div class="memo-row"><dt>9/25 新乡</dt><dd><b>银星酒店（中心医院胖东来店）</b></dd></div>
+<div class="memo-row"><dt>9/26–27 洛阳</dt><dd><b>洛悦春梅酒店（洛阳博物馆店）</b><br/>9/26入住，9/28退房。</dd></div>
+<div class="memo-row"><dt>9/28–29 开封</dt><dd><b>开封宋城路站丽呈睿轩酒店（汴梁小宋城店）</b><br/>9/28入住，9/30退房。</dd></div>
+<div class="memo-row"><dt>9/30 夜间</dt><dd><b>开封 → 临沂</b><br/>清明上河园夜景结束后返程。</dd></div>
+</dl></details>
+<footer class="page-footer"><p>距离和车程为规划参考，实际以当天导航为准；门票以景区当天公告为准。</p><a class="back-top" href="#top">返回顶部 ↑</a></footer>
 </main>
+<script>(() => {
+  const links = [...document.querySelectorAll('.day-link')];
+  const sections = [...document.querySelectorAll('.day-card')];
+  if (!links.length || !sections.length) return;
+  let waiting = false;
+  const sync = () => {
+    const header = document.querySelector('.site-header').getBoundingClientRect().height;
+    let current = null;
+    for (const section of sections) {
+      if (section.getBoundingClientRect().top <= header + 160) current = section.id;
+    }
+    for (const link of links) {
+      if (link.hash === '#' + current) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    }
+    waiting = false;
+  };
+  window.addEventListener('scroll', () => {
+    if (!waiting) { waiting = true; requestAnimationFrame(sync); }
+  }, { passive: true });
+  window.addEventListener('resize', sync, { passive: true });
+  sync();
+})();</script>
 </body>
 </html>
