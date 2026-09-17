@@ -24,23 +24,68 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.day-link{transition:none}}
 @media print{.site-header,.day-navigation,.skip-link,.back-top{display:none}html{scroll-padding-top:0}body{background:#fff;font-size:12px}.container{max-width:none;padding:0}.hero{padding-top:0}.hero-title{font-size:30px}.route-chain{min-width:0}.route-panel,.stay-card,.day-card,.overview-panel{box-shadow:none}.stay-grid{grid-template-columns:repeat(3,1fr)}.day-card{break-inside:avoid}.timeline>.timeline-entry{display:grid}.memo{display:none}.page-footer{padding-bottom:0}}
 </style>
+<style id="route-preview-styles">
+/* Route preview: self-contained, responsive, and usable without JavaScript. */
+.journey{--journey-ink:#194d39;--journey-muted:#5d7465;margin-top:28px;border:1px solid #ceded0;border-radius:20px;background:#fcfdfb;box-shadow:0 8px 28px #1c3f2c08;overflow:hidden}
+.journey-header{position:relative;isolation:isolate;display:flex;align-items:center;justify-content:space-between;gap:24px;overflow:hidden;padding:24px 30px;background:#194d39;color:#fff}
+.journey-header::before,.journey-header::after{content:"";position:absolute;z-index:-1;pointer-events:none;width:350px;height:350px;right:70px;top:-255px;border:1px solid #ffffff14;border-radius:44% 56% 47% 53%;transform:rotate(-28deg);box-shadow:0 0 0 22px #ffffff06,0 0 0 44px #ffffff05,0 0 0 67px #ffffff04}
+.journey-header::after{right:-230px;top:25px;width:300px;height:240px;transform:rotate(25deg)}
+.journey-kicker{display:flex;align-items:center;gap:8px;margin-bottom:7px;color:#d3e4d8;font-size:11px;letter-spacing:.1em;font-variant-numeric:tabular-nums}
+.journey-kicker::before{content:"";width:5px;height:5px;border-radius:50%;background:#d4ba82}
+.journey-title-row{display:flex;align-items:center;gap:11px}
+.journey-title-row svg{width:25px;height:25px;color:#d3e4d8}
+.journey-title-row h2{font-family:"Songti SC","Noto Serif CJK SC",serif;font-size:26px;line-height:1.4;letter-spacing:.09em}
+.journey-summary{display:flex;align-items:center;gap:24px;margin:0;flex-shrink:0}
+.journey-stat{display:flex;flex-direction:column;gap:2px}
+.journey-stat+.journey-stat{border-left:1px solid #ffffff30;padding-left:24px}
+.journey-stat dt{font-size:11px;color:#d3e4d8;order:2;letter-spacing:.035em}
+.journey-stat dd{margin:0;font-size:25px;font-weight:600;line-height:1.25;font-variant-numeric:tabular-nums;letter-spacing:-.02em;white-space:nowrap}
+.journey-stat dd small{font-size:12px;font-weight:400;margin-left:5px;letter-spacing:0;color:#e3eee6}
+.journey-stops{list-style:none;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));padding:27px 20px 25px;margin:0}
+.journey-step{position:relative;min-width:0}
+.journey-stop{position:relative;display:flex;flex-direction:column;align-items:center;width:fit-content;min-width:108px;margin-inline:auto;padding:6px 8px;border-radius:12px;text-align:center;transition:background-color .18s,transform .18s}
+.journey-date{color:var(--journey-muted);font-size:11px;line-height:20px;font-weight:500;font-variant-numeric:tabular-nums;white-space:nowrap}
+.journey-node{position:relative;display:grid;place-items:center;width:38px;height:38px;margin:16px 0 13px;border:1px solid #97b69e;border-radius:50%;background:#fcfdfb;box-shadow:0 0 0 5px #edf3ec;color:var(--journey-ink);font-size:12px;font-weight:700;font-variant-numeric:tabular-nums;transition:background-color .18s,color .18s}
+.journey-step:first-child .journey-node,.journey-step:last-child .journey-node{background:var(--journey-ink);border-color:var(--journey-ink);color:#fff}
+.journey-city{font-size:22px;font-weight:700;line-height:32px;letter-spacing:.06em;color:var(--journey-ink)}
+.journey-caption{margin-top:4px;color:var(--journey-muted);font-size:12px;font-weight:400;line-height:20px;white-space:nowrap}
+.journey-leg{position:absolute;left:calc(50% + 30px);top:23px;width:calc(100% - 60px);text-align:center;pointer-events:none}
+.journey-distance{display:block;color:#365f47;font-size:12px;font-weight:600;font-variant-numeric:tabular-nums;line-height:20px;white-space:nowrap}
+.journey-distance small{font-size:10px;font-weight:400;margin-left:3px}
+.journey-road{position:relative;display:block;height:1px;margin-top:18px;background:repeating-linear-gradient(90deg,#9db59e 0 4px,transparent 4px 8px)}
+.journey-road::after{content:"";position:absolute;right:0;top:-3px;width:6px;height:6px;border-right:1px solid #6b9274;border-top:1px solid #6b9274;transform:rotate(45deg)}
+.journey-time{display:block;margin-top:10px;color:var(--journey-muted);font-size:11px;line-height:18px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.journey-footer{display:flex;align-items:center;justify-content:space-between;gap:12px 24px;padding:15px 28px;border-top:1px solid #e0e9dc;background:#f1f6ef}
+.journey-charge{display:flex;align-items:center;gap:7px;font-size:12px;font-weight:600;color:var(--journey-ink)}
+.journey-charge svg{width:16px;height:16px}
+.journey-note{margin-top:3px;font-size:11px;line-height:1.7;color:var(--journey-muted)}
+.journey-hint{display:flex;align-items:center;gap:7px;font-size:12px;color:#486b53;white-space:nowrap}
+.journey-hint svg{width:14px;height:14px}
+.journey-stop:focus-visible{outline:2px solid var(--journey-ink);outline-offset:3px;background:#eaf2e7}
+@media(hover:hover){.journey-stop:hover{background:#edf4e9;transform:translateY(-2px)}.journey-stop:hover .journey-node{background:var(--journey-ink);color:#fff}}
+@media(max-width:900px) and (min-width:701px){.journey-header{padding-inline:22px}.journey-stops{padding-inline:8px}.journey-stop{min-width:88px;padding-inline:4px}.journey-city{font-size:20px}.journey-caption{font-size:11px}.journey-leg{left:calc(50% + 25px);width:calc(100% - 50px)}.journey-distance{font-size:10px}.journey-time{font-size:10px}.journey-footer{padding-inline:22px}.journey-hint{font-size:11px}}
+@media(max-width:700px){.journey{margin-top:22px;border-radius:16px}.journey-header{padding:20px;gap:12px}.journey-kicker{font-size:10px;letter-spacing:.025em;margin-bottom:5px}.journey-title-row{gap:8px}.journey-title-row h2{font-size:23px;letter-spacing:.06em}.journey-title-row svg{width:21px;height:21px}.journey-summary{gap:14px}.journey-stat dd{font-size:21px}.journey-stat dd small{font-size:10px;margin-left:3px}.journey-stat dt{font-size:10px}.journey-stat+.journey-stat{padding-left:14px}.journey-stat:first-child{display:none}.journey-stops{display:block;padding:18px 22px}.journey-stop{display:grid;grid-template-columns:34px minmax(0,1fr) auto;grid-template-rows:auto auto;align-items:center;column-gap:14px;width:100%;min-width:0;margin:0;padding:6px 0;text-align:left;border-radius:8px}.journey-node{grid-column:1;grid-row:1/3;width:32px;height:32px;margin:0;font-size:11px;box-shadow:0 0 0 4px #edf3ec}.journey-city{grid-column:2;grid-row:1;font-size:18px;line-height:26px}.journey-caption{grid-column:2;grid-row:2;font-size:11px;line-height:17px;margin-top:1px}.journey-date{grid-column:3;grid-row:1/3;font-size:11px;line-height:18px;align-self:center}.journey-leg{position:relative;left:auto;top:auto;display:flex;align-items:center;gap:10px;width:auto;min-height:30px;margin-left:16px;padding:5px 0 5px 32px;border-left:1px dashed #a9bdab;text-align:left}.journey-distance{font-size:11px;line-height:20px}.journey-distance small{font-size:10px}.journey-road{display:none}.journey-time{display:flex;align-items:center;gap:10px;margin:0;font-size:11px;line-height:20px}.journey-time::before{content:"";width:3px;height:3px;border-radius:50%;background:#8ca38e}.journey-footer{flex-wrap:wrap;padding:13px 20px;gap:7px}.journey-charge{font-size:11px}.journey-note{font-size:10px}.journey-hint{font-size:11px}}
+@media(max-width:359px){.journey-header{padding:18px 16px}.journey-kicker{font-size:9px}.journey-title-row h2{font-size:21px}.journey-stops{padding-inline:18px}.journey-stop{column-gap:11px}.journey-date{font-size:10px}.journey-summary{gap:0}.journey-stat+.journey-stat{padding-left:12px}.journey-stat dd{font-size:20px}.journey-footer{padding-inline:16px}}
+@media(prefers-reduced-motion:reduce){.journey-stop,.journey-node{transition:none}.journey-stop:hover{transform:none}}
+@media print{.journey{break-inside:avoid;box-shadow:none}.journey-header{background:#fff;color:#194d39;border-bottom:1px solid #ceded0}.journey-kicker,.journey-title-row svg,.journey-stat dt,.journey-stat dd small{color:#365f47}.journey-header::before,.journey-header::after,.journey-hint{display:none}.journey-stat+.journey-stat{border-color:#ceded0}.journey-stop{transform:none}.journey-step .journey-node{background:#fff;color:#194d39;box-shadow:none}}
+</style>
 </head>
-<body data-version="20260917-ev-200km">
+<body data-version="20260917-route-preview-v2">
 <a class="skip-link" href="#daily">跳到每日行程</a>
 <header class="site-header"><div class="container header-inner"><a class="brand" href="#top" aria-label="河南自驾手册，返回顶部"><span class="brand-mark" aria-hidden="true">豫</span>河南 · 自驾手册</a><span class="header-date">2026.09.25 — 10.01</span></div></header>
 <main id="top" class="container">
 <section class="hero" aria-labelledby="hero-title"><p class="eyebrow">2026 · 河南秋日自驾</p><h1 class="hero-title" id="hero-title">新乡会合，<span>洛阳与开封慢慢玩。</span></h1><div class="hero-details"><span>4人1车</span><span>元PLUS · 每约200km补能</span><span class="return-note">9月30日晚从开封返临沂</span></div>
-<div class="route-panel"><div class="route-heading"><strong><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 17h4a4 4 0 0 0 0-8H7m10-2h-1a4 4 0 0 0 0 8h4"/><circle cx="4" cy="17" r="2"/><circle cx="19" cy="7" r="2"/></svg>一路向河南</strong><span>距离为规划参考</span></div><nav class="route-scroll" aria-label="自驾路线，可左右滚动" tabindex="0"><div class="route-chain">
-<a class="route-city" href="#d25">北京</a>
-<span class="route-connector" aria-label="到新乡，约650–670km"><span class="route-distance">约650–670km</span><span class="route-arrow" aria-hidden="true"></span></span>
-<a class="route-city" href="#d25">新乡</a>
-<span class="route-connector" aria-label="到洛阳，约190km"><span class="route-distance">约190km</span><span class="route-arrow" aria-hidden="true"></span></span>
-<a class="route-city" href="#d26">洛阳</a>
-<span class="route-connector" aria-label="到开封，约193km"><span class="route-distance">约193km</span><span class="route-arrow" aria-hidden="true"></span></span>
-<a class="route-city" href="#d28">开封</a>
-<span class="route-connector" aria-label="到临沂，约443km"><span class="route-distance">约443km</span><span class="route-arrow" aria-hidden="true"></span></span>
-<a class="route-city" href="#d01">临沂</a>
-</div></nav></div></section>
+<section class="journey" id="route-preview" aria-labelledby="route-preview-title">
+<header class="journey-header"><div><p class="journey-kicker">自驾路线 · 09.25 — 10.01</p><div class="journey-title-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="18" r="2"/><circle cx="19" cy="6" r="2"/><path d="M7 18h8a4 4 0 0 0 0-8H9a4 4 0 0 1 0-8h3"/></svg><h2 id="route-preview-title">一路向南</h2></div></div><dl class="journey-summary"><div class="journey-stat"><dt>沿途城市</dt><dd>5<small>座</small></dd></div><div class="journey-stat"><dt>城际总里程 · 约</dt><dd>1,500<small>km</small></dd></div></dl></header>
+<nav aria-label="自驾路线，点击城市查看对应行程"><ol class="journey-stops">
+<li class="journey-step"><a class="journey-stop" href="#d25" aria-label="北京，09.25，满电出发，查看对应行程"><span class="journey-date">09.25</span><span class="journey-node" aria-hidden="true">01</span><span class="journey-city">北京</span><span class="journey-caption">满电出发</span></a><div class="journey-leg" aria-label="北京到新乡，约650–670公里，含规划补能约11–12小时"><span class="journey-distance">650–670<small>km</small></span><span class="journey-road" aria-hidden="true"></span><span class="journey-time">11–12 小时</span></div></li>
+<li class="journey-step"><a class="journey-stop" href="#d25" aria-label="新乡，09.25，会合 · 逛二胖，查看对应行程"><span class="journey-date">09.25</span><span class="journey-node" aria-hidden="true">02</span><span class="journey-city">新乡</span><span class="journey-caption">会合 · 逛二胖</span></a><div class="journey-leg" aria-label="新乡到洛阳，约190公里，含规划补能约3–3.5小时"><span class="journey-distance">190<small>km</small></span><span class="journey-road" aria-hidden="true"></span><span class="journey-time">3–3.5 小时</span></div></li>
+<li class="journey-step"><a class="journey-stop" href="#d26" aria-label="洛阳，09.26–27，龙门 · 古都夜色，查看对应行程"><span class="journey-date">09.26–27</span><span class="journey-node" aria-hidden="true">03</span><span class="journey-city">洛阳</span><span class="journey-caption">龙门 · 古都夜色</span></a><div class="journey-leg" aria-label="洛阳到开封，约193公里，含规划补能约3.5–4小时"><span class="journey-distance">193<small>km</small></span><span class="journey-road" aria-hidden="true"></span><span class="journey-time">3.5–4 小时</span></div></li>
+<li class="journey-step"><a class="journey-stop" href="#d28" aria-label="开封，09.28–30，宋韵 · 两座名园，查看对应行程"><span class="journey-date">09.28–30</span><span class="journey-node" aria-hidden="true">04</span><span class="journey-city">开封</span><span class="journey-caption">宋韵 · 两座名园</span></a><div class="journey-leg" aria-label="开封到临沂，约443公里，含规划补能约7.5–8.5小时"><span class="journey-distance">443<small>km</small></span><span class="journey-road" aria-hidden="true"></span><span class="journey-time">7.5–8.5 小时</span></div></li>
+<li class="journey-step"><a class="journey-stop" href="#d01" aria-label="临沂，10.01，清晨抵达 · 休息，查看对应行程"><span class="journey-date">10.01</span><span class="journey-node" aria-hidden="true">05</span><span class="journey-city">临沂</span><span class="journey-caption">清晨抵达 · 休息</span></a></li>
+</ol></nav>
+<footer class="journey-footer"><div><p class="journey-charge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m13 2-8 12h6l-1 8 9-13h-6z"/></svg>每约200 km 补能 · 慢慢开，安心玩</p><p class="journey-note">里程仅计城际；用时含规划补能与短休息，排队、堵车另计。</p></div><span class="journey-hint">点击城市，查看行程<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></span></footer>
+</section></section>
 <section class="overview-section" id="overview" aria-labelledby="overview-title"><div class="section-heading"><span class="section-index">01</span><h2 id="overview-title">全程总览</h2></div><div class="overview-panel"><div class="overview-labels" aria-hidden="true"><span>日期</span><div><span>城市</span><span>核心安排</span><span>住宿</span></div></div><ol class="overview-list">
 <li class="overview-row"><a class="overview-date" href="#d25" aria-label="查看9/25行程">9/25</a><div class="overview-detail"><div class="overview-city">北京 → 新乡</div><p class="overview-plan">06:00出发，17:00–18:00抵达；新乡东会合后逛二胖</p><p class="overview-stay">银星酒店（中心医院胖东来店）</p></div></li>
 <li class="overview-row"><a class="overview-date" href="#d26" aria-label="查看9/26行程">9/26</a><div class="overview-detail"><div class="overview-city">新乡 → 洛阳</div><p class="overview-plan">08:00出发，预留3–3.5小时含补能；洛阳博物馆 + 西工小街 + 应天门</p><p class="overview-stay">洛悦春梅酒店（洛阳博物馆店）</p></div></li>
