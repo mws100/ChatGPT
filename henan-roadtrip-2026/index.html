@@ -8,8 +8,25 @@
 <meta content="北京—新乡—洛阳—开封—临沂新能源自驾行程，包含每日安排、酒店、距离和各景点门票。" name="description"/>
 <title>河南自驾手册 · 2026</title>
 <link href="./journal.css?v=20260918-1" rel="stylesheet"/>
+<style id="memo-disclosure-styles">
+/* Explicit disclosure labels; native details stays usable without JavaScript. */
+#memo>summary{gap:14px}
+#memo>summary::after{content:none}
+#memo .memo-heading{min-width:0}
+#memo .memo-toggle{display:inline-flex;align-items:center;justify-content:center;gap:8px;flex-shrink:0;min-width:108px;min-height:42px;padding:9px 13px;border:1px solid var(--green);border-radius:9px;background:var(--green);color:#fff;font-size:13px;font-weight:600;line-height:1.5;white-space:nowrap;transition:background-color .18s}
+#memo .memo-collapse{display:none}
+#memo .memo-chevron{width:16px;height:16px;transition:transform .18s}
+#memo[open] .memo-expand{display:none}
+#memo[open] .memo-collapse{display:inline}
+#memo[open] .memo-toggle{background:var(--card);color:var(--green);border-color:#bccdb5}
+#memo[open] .memo-chevron{transform:rotate(180deg)}
+@media(hover:hover){#memo:not([open])>summary:hover .memo-toggle{background:var(--green-dark)}#memo[open]>summary:hover .memo-toggle{background:var(--soft)}}
+@media(max-width:380px){#memo>summary{gap:8px;padding:16px 14px;font-size:14px}#memo .memo-toggle{min-width:96px;min-height:40px;padding:8px 10px;font-size:12px}}
+@media(prefers-reduced-motion:reduce){#memo .memo-toggle,#memo .memo-chevron{transition:none}}
+@media print{#memo .memo-toggle{display:none}}
+</style>
 </head>
-<body data-version="20260918-concise-v1">
+<body data-version="20260918-memo-disclosure-v1">
 <a class="skip-link" href="#daily">跳到每日行程</a>
 <header class="site-header"><div class="container header-inner"><a aria-label="河南自驾手册，返回顶部" class="brand" href="#top"><span aria-hidden="true" class="brand-mark">豫</span>河南 · 自驾手册</a><nav aria-label="页面目录" class="chapter-nav"><a href="#overview">全程总览</a><a href="#daily">每日行程</a><a href="#memo">住宿备忘</a></nav><span class="header-date">2026.09.25 — 10.01</span></div></header>
 <main class="container" id="top">
@@ -103,7 +120,7 @@
 <li class="timeline-entry" id="d01-step-2"><div class="entry-time">返程途中</div><div class="entry-content"><h3>途中充电、午饭</h3><p>约443km，预留2次充电，结合午饭和休息。</p><div class="tip">含补能约7.5–8.5小时，仅供参考；堵车、排队另计，困了就休息。</div></div></li>
 <li class="timeline-entry" id="d01-step-3"><div class="entry-time">抵达后</div><div class="entry-content"><h3>抵达临沂</h3><p>到达后休息，当天不再安排游览。</p></div></li>
 </ol><footer class="day-lodging"><svg aria-hidden="true" class="icon" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" viewBox="0 0 24 24" width="20"><path d="M4 17h4a4 4 0 0 0 0-8H7m10-2h-1a4 4 0 0 0 0 8h4"></path><circle cx="4" cy="17" r="2"></circle><circle cx="19" cy="7" r="2"></circle></svg><span>临沂 · 抵达后休息</span></footer></article></div></section>
-<details class="memo" id="memo"><summary>住宿 / 出行备忘</summary><dl class="memo-list"><div class="memo-row"><dt>9/25 新乡</dt><dd><b>银星酒店（中心医院胖东来店）</b></dd></div>
+<details class="memo" id="memo"><summary><span class="memo-heading">住宿 / 出行备忘</span><span class="memo-toggle"><span class="memo-expand">展开查看</span><span class="memo-collapse">收起</span><svg aria-hidden="true" class="memo-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></span></summary><dl class="memo-list"><div class="memo-row"><dt>9/25 新乡</dt><dd><b>银星酒店（中心医院胖东来店）</b></dd></div>
 <div class="memo-row"><dt>9/26–27 洛阳</dt><dd><b>洛悦春梅酒店（洛阳博物馆店）</b><br/>9/26入住，9/28退房。</dd></div>
 <div class="memo-row"><dt>9/28–30 开封</dt><dd><b>开封宋城路站丽呈睿轩酒店（汴梁小宋城店）</b><br/>9/28入住，10/1退房，共3晚。</dd></div>
 <div class="memo-row"><dt>10/1 返程</dt><dd><b>开封 → 临沂</b><br/>休息充分后争取07:30–08:00早餐退房出发；9/30晚尽量完成补电，途中预留2次补能。含补能约7.5–8.5小时仅供规划，路况、排队和额外休息另计。</dd></div>
