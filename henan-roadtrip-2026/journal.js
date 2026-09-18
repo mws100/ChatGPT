@@ -1,4 +1,4 @@
-/* Small progressive enhancements; all links and booking details work without JS. */
+/* Progressive enhancements for chapter navigation, day links and the lodging memo. */
 (() => {
   'use strict';
   const header = document.querySelector('.site-header');
@@ -6,10 +6,8 @@
   const links = [...document.querySelectorAll('.day-link')];
   const days = [...document.querySelectorAll('.day-card')];
   const chapterLinks = [...document.querySelectorAll('.chapter-nav a')];
-  const chapters = ['overview', 'booking', 'daily', 'memo'].map(id => document.getElementById(id)).filter(Boolean);
+  const chapters = ['overview', 'daily', 'memo'].map(id => document.getElementById(id)).filter(Boolean);
   const topLink = document.querySelector('.floating-top');
-  const toggle = document.querySelector('.booking-toggle');
-  const details = [...document.querySelectorAll('.booking-item')];
   const mobile = window.matchMedia('(max-width:760px)');
   let lastDay = null;
   let scheduled = false;
@@ -48,18 +46,7 @@
   addEventListener('scroll', queue, {passive: true});
   addEventListener('resize', queue, {passive: true});
   addEventListener('hashchange', queue);
-  if (toggle && details.length) {
-    toggle.hidden = false;
-    const label = () => { toggle.textContent = details.every(item => item.open) ? '收起全部' : '展开全部'; };
-    toggle.addEventListener('click', () => {
-      const open = !details.every(item => item.open);
-      details.forEach(item => { item.open = open; });
-      label(); queue();
-    });
-    details.forEach(item => item.addEventListener('toggle', () => { label(); queue(); }));
-    label();
-  }
-  // Honour links into a collapsed memo or booking row.
+  // Reveal the lodging memo when following a link into it.
   const revealTarget = () => {
     let target;
     try { target = location.hash ? document.getElementById(decodeURIComponent(location.hash.slice(1))) : null; }
